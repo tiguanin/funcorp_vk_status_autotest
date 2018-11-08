@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="1" name="Тестирования статуса Вконтакте">
+
+    <parameter name="baseUrl" value="http://vsrf.sqrm.smarteng.ru/test/"/>
+
+    <parameter name="login" value="+79774789224"/>
+    <parameter name="password" value="testtest"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="baseUrl" value="https://vk.com/"/>
+
+    <suite-files>
+        <suite-file path="src/main/java/tests/suites/exampleSuite.xml"/>
+    </suite-files>
+</suite>
