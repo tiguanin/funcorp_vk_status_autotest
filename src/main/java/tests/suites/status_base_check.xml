@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!-- enabled="false" -->
+<!-- include -->
+<suite verbose="1" name="Example suite">
+
+    <test name="Авторизация" preserve-order="true" enabled="true">
+        <classes>
+            <class name="tests.init.LoginInit">
+                <methods>
+                    <include name="login"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Базовая проверка работоспособности изменения статуса" preserve-order="true" enabled="true">
+        <classes>
+            <class name="tests.init.status.StatusBaseInit">
+                <methods>
+                    <include name="checkDefaultStatus"/>
+                    <include name="checkMainElements"/>
+                    <include name="checkEmojiPanel"/>
+                    <include name="setCorrectStatus"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Проверка ввода граничных значений статуса" preserve-order="true" enabled="true">
+        <classes>
+            <class name="tests.init.status.StatusBoundaryValuesInit">
+                <methods>
+                    <include name="checkDefaultStatus"/>
+                    <include name="checkMainElements"/>
+                    <include name="setStatusWithOnceSymbol"/>
+                    <include name="setCorrectStatus"/>
+                    <include name="setIncorrectStatus"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Проверка трансляции музыки в статус" preserve-order="true" enabled="true">
+        <classes>
+            <class name="tests.init.status.StatusAudiosInit">
+                <methods>
+                    <include name="checkDefaultStatus"/>
+                    <include name="checkMainElements"/>
+                    <include name="playFirstAudioFromPlaylist"/>
+                    <include name="playSecondAudioFromPlayList"/>
+                    <include name="checkStatusAfterDisableAudioSharing"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Проверка шеринга статуса друзьям (на стену)" preserve-order="true" enabled="true">
+        <classes>
+            <class name="tests.init.status.StatusFriendsShareInit">
+                <methods>
+                    <include name="checkDefaultStatus"/>
+                    <include name="checkMainElements"/>
+                    <include name="setCorrectStatus"/>
+                    <include name="shareStatusToFriends"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

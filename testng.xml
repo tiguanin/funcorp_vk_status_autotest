@@ -10,6 +10,6 @@
     <parameter name="baseUrl" value="https://vk.com/"/>
 
     <suite-files>
-        <suite-file path="src/main/java/tests/suites/exampleSuite.xml"/>
+        <suite-file path="src/main/java/tests/suites/status_base_check.xml"/>
     </suite-files>
 </suite>
